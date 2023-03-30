@@ -1,0 +1,231 @@
+html {
+    overflow-x: hidden;
+}
+body {
+	margin: 0;
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+		'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+		sans-serif;
+}
+nav {
+    height: 60px;
+    display: flex;
+    align-items: center;
+    padding: 0 5%;
+    background: -webkit-linear-gradient(left, rgb(41, 196, 169), rgb(70, 171, 154));
+}
+.form-control {
+	padding: 0.375rem 0.75rem;
+	line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+	margin-right: 20px;
+}
+.btn {
+	color: white;
+    cursor: pointer;
+    background: -webkit-linear-gradient(left, rgb(41, 196, 169), rgb(70, 171, 154));
+    border-width: 1px;
+    border-style: solid;
+    border-color: white;
+    border-image: initial;
+	font-size: 1rem;
+    padding: 0.375rem 1rem;
+    line-height: 1.5;
+    border-radius: 5px;
+    transition: all 0.4s ease 0s;
+}
+.btn-danger {
+	background: #dc3545;
+}
+.loadingOverlay {
+	width: 99vw;
+	height: 100vh;
+    position: fixed;
+    top: 0;
+	z-index: 1001;
+	background: rgb(151 151 151 / 54%);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.loadingPop {
+	width: 50%;
+    height: 30%;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+	flex-direction: column;
+}
+.spinner-border {
+	border: 10px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 10px solid rgb(41, 196, 169);
+  width: 60px;
+  height: 60px;
+  -webkit-animation: spin 2s linear infinite; /* Safari */
+  animation: spin 2s linear infinite;
+}
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+.loadingPop p {
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+		'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+		sans-serif;
+}
+.siteTitle {
+    font-weight: 600;
+    font-size: 1.5em;
+}
+.siteTitle a {
+	color: white;
+	text-decoration: none;
+}
+.appContainer {
+	padding: 1.5rem;
+	margin: 3rem;
+	background-color: white;
+}
+.filtersSection {
+	border-bottom: 1px solid #ced4da;
+	padding: 40px 5% 40px;
+	margin-bottom: 20px;
+}
+.sectionTitle {
+	font-size: 1.5em;
+}
+.filtersActions {
+	display: flex;
+	align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.filtersActions p {
+	margin-top: 0;
+}
+.movieFilters {
+	padding-left: 0;
+}
+.movieFilters li {
+	display: inline-block;
+	text-align: center;
+	margin-right: 10px;
+	padding: 5px 15px;
+	border: 1px solid grey;
+	border-radius: 50px;
+}
+.movieFilters input[type='radio'] {
+	display: none;
+	width: 100%;
+}
+.newMovieSection, .newGenreSection {
+	padding: 0 5%;
+	margin-bottom: 30px;
+}
+.sectionTitle {
+	margin-bottom: 20px;
+}
+.listMovies {
+	padding: 0 5%;
+}
+.movieGroupItem {
+    position: relative;
+    display: block;
+    padding: 1.2rem 1.25rem;
+    background-color: #fff;
+    border: 1px solid rgba(0,0,0,.125);
+	overflow-y: auto;
+}
+.movieGroupItemWatched {
+    /* background-color: #c3e6cb; */
+    background-color: #e7e7e7;
+}
+.movieItem {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.movieTagSection {
+	display: flex;
+    align-items: center;
+	gap: 30px;
+}
+.movieTags {
+	display: flex;
+	flex-wrap: wrap;
+	padding-left: 0;
+	list-style: none;
+}
+.movieTags li {
+	display: inline;
+    margin: 5px 10px;
+    padding: 5px 15px;
+    border: 1px solid grey;
+    border-radius: 50px;
+}
+.movieActions {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap:30px;
+}
+.totalMoviesWatched {
+	text-align: center;
+}
+.genreListSection {
+	padding: 0 5%;
+	margin-bottom: 60px;
+}
+.genreList {
+	padding-left: 0;
+}
+.genreList li {
+	display: inline-block;
+	margin: 10px;
+	padding: 5px 15px;
+	border: 1px solid grey;
+	border-radius: 50px;
+}
+form.edit-title {
+	display: none;
+}
+@media (max-width: 600px) {
+	.filtersActions > div {
+		margin: 20px 0;
+	}
+	.movieItem {
+		display: block;
+	}
+	.movieTitle {
+		font-size: 1.2em;
+		font-weight: bold;
+	}
+	.movieTitleDiv {
+		display: flex;
+		justify-content: center;
+	}
+	.movieTagSection {
+		display: block;
+		margin: 20px 0;
+	}
+	.movieTags {
+		justify-content: center;
+	}
+	.formMovieGenre {
+		text-align:center;
+	}
+  }
+
+.movieTitleDiv {
+	display: flex;
+    justify-content: center;
+}
+.movieTitleDiv p.movieTitle {
+	margin: auto 20px auto 10px;
+	text-align: center;
+}
