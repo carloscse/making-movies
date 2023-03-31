@@ -35,7 +35,7 @@ const MovieItem = ({ id, title, tags, watched }) => {
 
 	return (
 		<li key={id} className={`movieGroupItem ${watched && 'movieGroupItemWatched'}`}>
-			<div className='movieItem'>
+			<div  data-testid="movieItemTestId" className='movieItem'>
 				<div className='movieTitleDiv'>
 					<p className="movieTitle">{title}</p>
 					<button className='btn btn-info' onClick={handleEditClick}>Edit</button>

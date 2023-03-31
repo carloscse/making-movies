@@ -34,26 +34,26 @@ const MovieList = () => {
 				<div className='filtersActions'>
 					<div>
 						<p>Filter by name:</p>
-						<input type='text' className='form-control' placeholder='Search title' onChange={(event) => handleTitleInput(event)}></input>
+						<input data-testid="filterNameInput" type='text' className='form-control' placeholder='Search title' onChange={(event) => handleTitleInput(event)}></input>
 					</div>
 					<div>
 						<p>Filter by genre:</p>
 						<ul className="movieFilters">
 							<li>
 								<label>
-									<input type="radio" value="Horror" name="filters" onChange={handleGenreSelect} />
+									<input type="radio" value="horror" name="filters" onChange={handleGenreSelect} />
 									Horror
 								</label>
 							</li>
 							<li>
 								<label>
-									<input type="radio" value="Romance" name="filters" onChange={handleGenreSelect} />
+									<input type="radio" value="romance" name="filters" onChange={handleGenreSelect} />
 									Romance
 								</label>
 							</li>
 							<li>
 								<label>
-									<input type="radio" value="Comedy" name="filters" onChange={handleGenreSelect} />
+									<input type="radio" value="comedy" name="filters" onChange={handleGenreSelect} />
 									Comedy
 								</label>
 							</li>

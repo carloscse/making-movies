@@ -18,7 +18,7 @@ const AddMovieForm = () => {
 		<div className='newMovieSection'>
 			<div className="sectionTitle">Add movie</div>
 			<form onSubmit={onSubmit} className='form-inline'>
-				<input
+				<input data-testid="inputAddMovie"
 					type='text'
 					className='form-control'
 					placeholder='Add movie...'

@@ -131,7 +131,6 @@ const movieSlice = createSlice({
         },
         [filterMoviesByGenreAsync.fulfilled]: (state, action) => {
             state.loading = false;
-            console.log(action.payload.value)
             state.movies = state.moviesContainer.filter((movie) => movie.tags.includes(action.payload.value))
         }
     }

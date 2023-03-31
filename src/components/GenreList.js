@@ -5,7 +5,7 @@ const GenreList = () => {
 	const genres = useSelector((state) => state.genres);
 
 	return (
-		<div className='genreListSection'>
+		<div data-testid="genreListSectionId" className='genreListSection'>
 			<ul className='genreList'>
 				{genres.map((genre) => (
 					<li key={genre}>{genre}</li>
